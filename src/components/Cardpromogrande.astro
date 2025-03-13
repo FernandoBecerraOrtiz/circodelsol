@@ -1,0 +1,18 @@
+---
+// Fernando Becerra Ortiz
+const { title, link, linkText, posterDesktop, posterMobile } = Astro.props
+---
+
+<div class="relative">
+    <img src={posterDesktop} alt=`Imagen ${posterDesktop}` class="hidden xl:block object-cover object-center w-full xl:h-full transition-all duration-300 ease-linear transform group-hover:scale-105">
+    <img src={posterMobile} alt=`Imagen ${posterMobile}` class="block xl:hidden object-cover object-center w-full min-h-[360px] h-[360px] md:min-h-[580px] md:h-[580px] xl:h-full transition-all duration-300 ease-linear transform group-hover:scale-105">
+
+    <div class="absolute top-0 flex flex-col items-center justify-center min-h-[355.8px] w-full h-full text-white text-center">
+        <a class="flex justify-center items-end xl:justify-normal xl:items-center xl:max-w-[1438px] w-full h-full" href={link}>
+            <div class="ml-0 mb-20 xl:ml-40 xl:mb-0">
+                <h2 class="max-w-[366px] text-[20px] xl:text-[40px] mb-[10px] font-bold leading-[1.2]">{title}</h2>
+                <button class="cursor-pointer rounded-full border border-white px-6 py-2 mt-4 text-[16px] font-bold w-[276px] transition-all duration-100 ease-linear hover:bg-gray-50/60" type="button">{linkText}</button>
+            </div>
+        </a>
+    </div>
+</div>

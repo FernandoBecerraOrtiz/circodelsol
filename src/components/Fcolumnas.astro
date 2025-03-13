@@ -1,0 +1,65 @@
+---
+// Fernando Becerra Ortiz
+import LinkItem from './Linkitemacordeon.astro';
+---
+
+<div class="block xl:hidden">
+    <details class="pt-16">
+        <summary class="list-none">
+            <div class="flex justify-between items-center font-bold cursor-pointer border-b border-footer-link">
+                <h2 class="tracking-wider leading-4 py-4 text-left">Cirque du Soleil</h2>
+                <span class="text-3xl">+</span>
+            </div>
+        </summary>
+        <ul class="pl-4">
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/sobre-nosotros" text="Sobre nosotros" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/boletin" text="Boletin" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/contactenos" text="Contáctenos" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/shop" text="Tienda" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/gift-cards" text="Tarjetas de regalo" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/preguntas-frecuentes" text="Preguntas Frecuentes" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/mapa-del-sitio" text="Mapa del sitio" /></li>
+        </ul>
+    </details>
+    
+    <details class="pt-4">
+        <summary class="list-none">
+            <div class="flex justify-between items-center font-bold cursor-pointer border-b border-footer-link">
+                <h2 class="tracking-wider leading-4 py-4 text-left">Corporativo</h2>
+                <span class="text-3xl">+</span>
+            </div>
+        </summary>
+        <ul class="pl-4">
+            <li><LinkItem href="https://careers.cirquedusoleil.com/es/" text="Carrera" /></li>
+            <li><LinkItem href="https://casting.cirquedusoleil.com/es/" text="Casting" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/citizenship" text="Responsabilidad social" /></li>
+            <li><LinkItem href="https://www.onedrop.org/en/" text="One Drop" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/press" text="Sala de prensa" /></li>
+            <li><LinkItem href="https://www.cirquedusoleil.com/es/partners" text="Socios corporativos" /></li>
+        </ul>
+    </details>
+    
+    <details class="pt-4">
+        <summary class="list-none">
+            <div class="flex justify-between items-center font-bold cursor-pointer border-b border-footer-link">
+                <h2 class="tracking-wider leading-4 py-4 text-left">Descubra nuestro mundo</h2>
+                <span class="text-3xl">+</span>
+            </div>
+        </summary>
+        <ul class="pl-4">
+            <li><LinkItem href="https://www.cirquedusoleilentertainmentgroup.com/es/" text="Cirque du Soleil Entertainment Group" /></li>
+            <li><LinkItem href="https://events.cirquedusoleil.com/es/" text="Cirque du Soleil Events + Experiences" /></li>
+            <li><LinkItem href="https://www.blueman.com/es/" text="Blue Man Group" /></li>
+            <li><LinkItem href="https://vstarentertainment.com/es/" text="VStar Entertainment" /></li>
+        </ul>
+    </details>
+</div>
+
+<style>
+    details[open] span {
+        display: none;
+    }
+    details[open] summary div::after {
+        content: "-";
+    }
+</style>

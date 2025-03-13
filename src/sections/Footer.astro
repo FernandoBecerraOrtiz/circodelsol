@@ -1,0 +1,29 @@
+---
+// Fernando Becerra Ortiz
+import Facordeon from "../components/Facordeon.astro";
+import Fcolumnas from "../components/Fcolumnas.astro";
+import Fcopyr from "../components/Fcopyr.astro";
+import Fenlaces from "../components/Fenlaces.astro";
+import Flogo from "../components/Flogo.astro";
+import Fredes from "../components/Fredes.astro";
+---
+
+<footer>
+    <div class="bg-black text-white">
+        <div class="relative pb-8 pl-2.5 xl:pl-20 pr-3 xl:pr-20 pt-8 max-w-[1430px] m-auto">
+            <div class="flex xl:justify-between items-center">
+                <div class="hidden xl:block">
+                    <Flogo />
+                </div>
+                <Fredes />
+            </div>
+            <Facordeon />
+            <Fcolumnas />
+            <Fenlaces />
+            <div class="block xl:hidden">
+                <Flogo />
+            </div>
+            <Fcopyr />
+        </div>
+    </div>
+</footer>

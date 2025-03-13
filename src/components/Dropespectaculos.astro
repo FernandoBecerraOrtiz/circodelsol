@@ -1,0 +1,38 @@
+---
+// Fernando Becerra Ortiz
+import Enlacedrop from "./Enlacedrop.astro";
+// Version 'automatizada' recorriendo un array de objetos literales con un map, para ver versión 'manual', ver "Facordeon.astro"
+
+const shows = [
+	{ name: "Alegría", italic: true },
+    { name: "Cirque du Soleil ALIZÉ", italic: false },
+    { name: "Cirque du Soleil ʻAuana", italic: false },
+    { name: "Corteo", italic: true },
+    { name: "Cirque du Soleil CRYSTAL", italic: false },
+    { name: "Drawn to Life", italic: false },
+    { name: "Cirque du Soleil ECHO", italic: false },
+    { name: "JOYÀ", italic: false },
+    { name: "KÀ", italic: false },
+    { name: "KOOZA", italic: false },
+    { name: "KURIOS - Cabinet of Curiosities", italic: true },
+    { name: "LUDÕ", italic: false },
+    { name: "LUZIA", italic: false },
+    { name: "Cirque du Soleil Mad Apple", italic: false },
+    { name: "Michael Jackson ONE", italic: true },
+    { name: "Mystère", italic: true },
+    { name: "\"O\"", italic: false },
+    { name: "OVO", italic: false },
+    { name: "Série hommage - Daniel Bélanger", italic: false },
+    { name: "'Twas the Night Before...", italic: false },
+];
+---
+
+<ul class="grid grid-cols-[repeat(4,minmax(275px,25%))] gap-1 max-w-[1150px] bg-white shadow-[0px_3px_6px_rgba(27,27,27,0.2)]">
+    {shows.map(show => (
+        <Enlacedrop name={show.name} italic={show.italic ? 'italic' : ''} />
+    ))}
+    <li class="bg-[rgb(233,233,233)] w-[1112px]">
+        <a class="inline-block text-[12px] text-[#5c5c5c] border-b-2 border-b-[#5c5c5c] font-bold uppercase ml-[20px] leading-[20px]
+        relative hover:border-b-0 after:bg-[#5c5c5c] after:absolute after:h-0.5 after:w-0 after:top-5 after:left-0 hover:after:w-full hover:after:transition-[width] hover:after:duration-300 hover:after:ease-in" href="https://www.cirquedusoleil.com/es/espectaculos#ciudades">Todas las ciudades</a>
+    </li>
+</ul>

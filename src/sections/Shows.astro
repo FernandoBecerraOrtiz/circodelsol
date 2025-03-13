@@ -1,0 +1,21 @@
+---
+// Fernando Becerra Ortiz
+import Cardshow from "../components/Cardshow.astro";
+
+// Obtener todos los datos de los archivos md, accediendo al archivo (show), al atributo markdown (frontmatter), title con su valor
+const shows = Object.values(import.meta.glob('../content/shows/*.md', { eager: true })).map(show => ({
+    title: show.frontmatter.title,
+    place: show.frontmatter.place,
+    description: show.frontmatter.description,
+    poster: show.frontmatter.poster,
+}));
+---
+
+<section class="max-w-[1470px] mx-auto mt-10 mb-10 pl-4 pr-4">
+    <h2 class="max-w-[935px] mb-10 text-2xl md:text-[32px] tracking-[1.6px] font-bold text-left">Descubre nuestros espectáculos, reserva tus entradas</h2>
+    <div class="flex overflow-x-auto h-[710px]">
+        {shows.map(show => (
+            <Cardshow title={show.title} place={show.place} description={show.description} poster={show.poster} />)
+        )}
+    </div>
+</section>

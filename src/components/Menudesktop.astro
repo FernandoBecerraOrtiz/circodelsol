@@ -1,0 +1,43 @@
+---
+// Fernando Becerra Ortiz
+import cdsLogo from '../../public/Logo.svg';
+import lensIcon from '../../public/lens.svg';
+import personIcon from '../../public/person.svg';
+
+import Menudesktoplink from './Menudesktoplink.astro';
+import Dropespectaculos from '../components/Dropespectaculos.astro';
+---
+
+<ul class="hidden xl:flex items-center text-sm w-full bg-black text-white font-bold">
+    <li class="pr-1 pl-4 ml-1">
+        <a class="block pr-3" href="/"><img src={cdsLogo.src} alt="Cirque du Soleil"></a>
+    </li>
+    <li class="hover:bg-gray-500 leading-[60px] group relative pr-[20px] cursor-pointer">
+        <span>Espectáculos y entradas<span class="inline-block ml-2 w-4 h-4 border-[3px] border-r-0 border-t-0 transform scale-50 -translate-y-[35%] rotate-315 absolute top-7 right-0"></span>
+        </span>
+        <div class="absolute leading-[48px] top-15 font-normal -z-10 mt-[-400px] group-hover:mt-[0] transition-all duration-300 ease-in-out">
+            <Dropespectaculos />
+        </div>
+    </li>
+    
+    <Menudesktoplink text="Las Vegas" link="https://www.cirquedusoleil.com/es/las-vegas-shows" />
+
+    <Menudesktoplink text="Grupo" link="https://www.cirquedusoleil.com/es/grupo" />
+
+    <Menudesktoplink text="Video" link="https://cirqueconnect.cirquedusoleil.com/es" />
+
+    <Menudesktoplink text="Blog" link="https://blog.cirquedusoleil.com/es" />
+
+    <ul class="ml-auto flex items-center">
+        <li class="hover:bg-gray-500">
+            <button class="w-16 h-16 flex items-center justify-center cursor-pointer" type="button">
+                <img class="w-8 h-8" src={lensIcon.src} alt="Search">
+            </button>
+        </li>
+        <li class="w-16 h-16 flex items-center justify-center mr-5">
+            <a class="block p-1 border-2 rounded-[50%]" href="#">
+                <img class="w-5 h-5" src={personIcon.src} alt="Account">
+            </a>
+        </li>
+    </ul>
+</ul>

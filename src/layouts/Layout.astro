@@ -1,0 +1,24 @@
+---
+// Fernando Becerra Ortiz
+import '../styles/global.css'
+const title = "Descubre espectáculos, entradas y horarios | Cirque du Soleil"
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: var(--font-be-vietnam-pro);
+	}
+</style>

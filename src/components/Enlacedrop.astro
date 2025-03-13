@@ -1,0 +1,8 @@
+---
+// Fernando Becerra Ortiz
+const { name, italic } = Astro.props;
+---
+
+<li class="hover:bg-[#cbcbcb] px-4 border-t-1 border-t-[#cbcbcb]">
+    <a class={`${italic} text-drop-menu-item text-[14px] text-[#282828] inline-block size-full max-w-full max-h-[48px]`} href="#">{name}</a>
+</li>

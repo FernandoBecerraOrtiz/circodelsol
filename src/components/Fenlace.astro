@@ -1,0 +1,8 @@
+---
+// Fernando Becerra Ortiz
+const { href, text, modCSS } = Astro.props
+---
+
+<li class=`min-w-[26%] h-[40px] mr-[31px] ${modCSS}`>
+    <a class="underline text-[14px] hover:border-[#767676] hover:text-[#767676]" href={href}>{text}</a>
+</li>

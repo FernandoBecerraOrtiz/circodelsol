@@ -1,0 +1,51 @@
+---
+// Fernando Becerra Ortiz
+import lensIcon from '../../public/lens.svg';
+import Menumovillink from './Menumovillink.astro';
+---
+
+<ul id="menuLateral" class="bg-[#1b1b1b] text-white text-sm font-bold tracking-wide flex-col w-[260px] h-[100vh] pt-[16px] pb-[16px] pl-[30px] pr-[30px] fixed top-0 left-[-275px] transition-all duration-300 peer-checked:left-0">
+            
+    <Menumovillink text="Espectáculos y boletos" />
+
+    <Menumovillink text="Las Vegas" />
+
+    <Menumovillink text="Grupo" />
+
+    <Menumovillink text="Video" />
+
+    <Menumovillink text="Blog" />
+
+    <li class="hover:bg-gray-500">
+        <button class="ml-1 mt-2 flex items-center justify-center cursor-pointer" type="button">
+            <img class="w-[32px] h-[32px]" src={lensIcon.src} alt="Search">
+        </button>
+    </li>
+    <li class="mt-15 mb-4">
+        <a class="block w-full border-b-1 border-drop-menu-item text-[#989898] pt-[13px] pb-[13px] normal-case" href="/">Cirque du Soleil</a>
+    </li>
+    <li>
+        <details class="cursor-pointer">
+            <summary class="list-none">
+                <div class="flex items-center ">
+                    <h5>Español</h5>
+                    <span class="ml-1 text-xl">+</span>
+                </div>
+            </summary>
+            <ul class="mt-1">
+                <li class="mt-1 mb-1">English</li>
+                <li class="mt-1 mb-1">Français</li>
+            </ul>
+        </details>
+    </li>
+</ul>
+
+<style>
+    details[open] span {
+        display: none;
+    }
+    details[open] summary div::after {
+        content: "-";
+        margin-left: 4px;
+    }
+</style>

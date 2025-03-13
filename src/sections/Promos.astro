@@ -1,0 +1,34 @@
+---
+// Fernando Becerra Ortiz
+import Cardpromo from '../components/Cardpromo.astro';
+import Cardpromogrande from '../components/Cardpromogrande.astro';
+
+// Espectáculos de Las Vegas es un button y no un enlace porque al meter un enlace dentro de otro
+// astro los separaba dado que no tiene mucho sentido. De todos modos, da igual donde se clique porque
+// se está clicando en el enlace que ocupa todo el espacio
+---
+
+<section>
+    <div class="flex flex-col justify-center xl:grid xl:grid-cols-2 gap-6 mx-auto w-full max-w-[1470px] pl-[16px] pr-[16px]">
+
+        <div class="col-span-2 xl:grid xl:w-full min-h-[360px] md:min-h-[580px] mb-[20px] rounded-[15px] overflow-hidden group">
+        
+            <Cardpromogrande title="Los eventos de Las Vegas que no querrás perderte" link="https://www.cirquedusoleil.com/es/las-vegas-shows" linkText="Espectáculos de Las Vegas" posterDesktop="poster/card_grande.avif" posterMobile="poster/card_grande_mobile.avif" />
+
+        </div>
+
+        <div class="col-span-2 grid sm:grid-cols-2 gap-4 max-w-[1470px]">
+
+            <Cardpromo logo="poster/cosm.svg" title="Descubre 'O' en Realidad compartida" link="https://www.cirquedusoleil.com/es/cosm-x-o" linkText="Mas información" posterDesktop="poster/card_m1.avif" posterMobile="poster/card_m1_mobile.avif" />
+
+            <Cardpromo title="L'Eau de Parfum by Cirque du Soleil" link="https://parfumcirquedusoleil.com/" linkText="Mas información" posterDesktop="poster/card_m2.avif" posterMobile="poster/card_m2_mobile.avif" />
+
+            <Cardpromo title="Eventos grupales y corporativos" link="https://www.cirquedusoleil.com/es/grupo" linkText="Planifica tu evento" posterDesktop="poster/card_m3.avif" posterMobile="poster/card_m3_mobile.avif" />
+
+            <Cardpromo logo="poster/macallan.svg" title="La colección Harmony de The Macallan" link="https://blog.cirquedusoleil.com/es/macallan-cirque-du-soleil" linkText="Descubre el whisky" posterDesktop="poster/card_m4.avif" posterMobile="poster/card_m4_mobile.avif" />
+
+            <Cardpromo title="Descubre la música de Cirque du Soleil" link="https://www.cirquedusoleil.com/es/musica" linkText="Escuchar" posterDesktop="poster/card_m5.avif" posterMobile="poster/card_m5_mobile.avif" />
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+npm create astro@latest
+
+npx astro add tailwind
+
+npm run dev
+
+npm run build: Crea la pagina en el directorio "dist" dentro de la raiz
+    - Todos los archivos del directorio public se considera que están en la raiz del directorio "dist",
+    por ende, dentro de Astro a la hora de elaborar la web hay que referenciarlas desde la raiz,
+    sin rutas relativas, solo por su nombre directamente
+    - Tambien hay que cambiar de nombre el CSS estático que genera, así como modificar el nombre de ese CSS en el index.html
+
+npm run preview

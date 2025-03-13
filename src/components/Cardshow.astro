@@ -1,0 +1,20 @@
+---
+// Fernando Becerra Ortiz
+const { title, place, description, poster } = Astro.props
+---
+
+<div class="flex flex-col w-[335.5px] h-[592.917px] mr-6 flex-none">
+    <div>
+        <div class="min-h-[447px] rounded-2xl overflow-hidden">
+            <div class="h-[447px] bg-cover bg-center cursor-pointer transition-all duration-300 ease-linear hover:transform hover:scale-105"
+                style={`background-image: url(${poster})`}>
+            </div>
+        </div>
+
+        <div class="flex-grow mt-5">
+            <h4 class="text-[#6349e9] text-base font-bold uppercase">{place}</h4>
+            <h3 class="text-[#1b1b1b] hover:text-custom-purple text-2xl font-bold mt-2 mb-4">{title}</h3>
+            <p class="text-[#1b1b1b] font-light leading-[140%]">{description}</p>
+        </div>
+    </div>
+</div>

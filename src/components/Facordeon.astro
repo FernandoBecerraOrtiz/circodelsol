@@ -1,0 +1,41 @@
+---
+// Fernando Becerra Ortiz
+import LinkItem from './Linkitemacordeon.astro';
+
+// Instanciar manualmente cada Link pasandole como parámetros los valores de ese enlace concreto, para ver versión 'automatizada', ver "Dropespectaculos.astro"
+---
+
+<ul class="hidden xl:grid grid-cols-3 row-start-2 col-span-2 pt-16">
+    <li>
+        <h2 class="uppercase tracking-wider leading-4 py-4 w-100 text-left border-b-1 border-footer-link font-bold">Cirque du Soleil</h2>
+        <ul>
+            <LinkItem href="https://www.cirquedusoleil.com/es/sobre-nosotros" text="Sobre nosotros" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/boletin" text="Boletin" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/contactenos" text="Contáctenos" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/shop" text="Tienda" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/gift-cards" text="Tarjetas de regalo" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/preguntas-frecuentes" text="Preguntas Frecuentes" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/mapa-del-sitio" text="Mapa del sitio" />
+        </ul>
+    </li>
+    <li>
+        <h2 class="uppercase tracking-wider leading-4 py-4 w-100 text-left border-b-1 border-footer-link font-bold">Corporativo</h2>
+        <ul>
+            <LinkItem href="https://careers.cirquedusoleil.com/es/" text="Carrera" />
+            <LinkItem href="https://casting.cirquedusoleil.com/es/" text="Casting" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/citizenship" text="Responsabilidad social" />
+            <LinkItem href="https://www.onedrop.org/en/" text="One Drop" />
+            <LinkItem href="https://www.cirquedusoleil.com/press" text="Sala de prensa" />
+            <LinkItem href="https://www.cirquedusoleil.com/es/partners" text="Socios corporativos" />
+        </ul>
+    </li>
+    <li>
+        <h2 class="uppercase tracking-wider leading-4 py-4 w-100 text-left border-b-1 border-footer-link font-bold">Descubra nuestro mundo</h2>
+        <ul>
+            <LinkItem href="https://www.cirquedusoleilentertainmentgroup.com/es/" text="Cirque du Soleil Entertainment Group" />
+            <LinkItem href="https://events.cirquedusoleil.com/es/" text="Cirque du Soleil Events + Experiences" />
+            <LinkItem href="https://www.blueman.com/es/" text="Blue Man Group" />
+            <LinkItem href="https://vstarentertainment.com/es/" text="VStar Entertainment" />
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,41 @@
+---
+// Fernando Becerra Ortiz
+import cdsLogo from '../../public/Logo.svg';
+import personIcon from '../../public/person.svg';
+
+import Menulateral from './Menulateral.astro';
+
+// https://tailwindcss.com/docs/hover-focus-and-other-states#differentiating-peers
+// He usado este ejemplo para usar peer y peer-checked para estilar elementos hermanos al mismo nivel
+// para formularios. Por ende, he usado checkbox y no popover para hacer uso de esos selectores especiales
+---
+
+<ul class="flex xl:hidden w-full justify-between items-center bg-black text-white font-bold relative">
+    <li class="w-[60px] h-[60px]">
+        <input type="checkbox" id="menu" name="menu" class="fixed top-6 left-6 opacity-0 peer" />
+        <label for="menu" class="fixed top-6 left-[12px] transition-all duration-300 peer-checked:left-72 peer-checked:opacity-0 cursor-pointer">
+            <svg viewBox="0 0 16 12" width="37" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.5 5.2h15v1.7H.5V5.2zm0 6.3h15V9.8H.5v1.7zm0-11v1.7h15V.5H.5z" fill="#FFF"></path>
+            </svg>
+        </label>
+
+        <div id="cerrar" class="hidden peer-checked:flex items-center justify-center fixed top-5 left-72">
+            <label for="menu" class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" class="fill-white w-6 h-6">
+                    <path d="M22 1.2L20.8 0 11 9.8 1.2 0 0 1.2 9.8 11 0 20.8 1.2 22l9.8-9.8 9.8 9.8 1.2-1.2-9.8-9.8z"></path>
+                </svg>
+            </label>
+        </div>
+
+        <Menulateral />
+
+        <li>
+            <a href="/"><img src={cdsLogo.src} alt="Cirque du Soleil"></a>
+        </li>
+        <li class="w-[60px] h-[60px] flex items-center justify-center">
+            <a class="block p-1 border-2 rounded-[50%]" href="#">
+                <img class="w-5 h-5" src={personIcon.src} alt="Account">
+            </a>
+        </li>
+    </li>
+</ul>
